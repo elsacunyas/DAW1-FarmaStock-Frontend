@@ -1,0 +1,51 @@
+
+
+
+<div class="container">
+    <div>
+        <input type="text" [(ngModel)]="name"/>
+        <button (click)="buscarProducto(name)">Buscar</button>
+    </div>
+
+    <form class="row g-3"(ngSubmit)="registrarSolicitud()" >
+        <div class="col-md-6">
+            <label for="id" class="form-label">ID</label>
+            <input type="number" class="form-control" id="id"
+             name="id" [(ngModel)]="nuevaSolicitud.id">
+          </div>
+        <div class="col-md-6">
+          <label for="nomPro" class="form-label">Producto</label>
+          <input type="text" class="form-control" id="nomPro"
+           name="nomPro" [(ngModel)]="producto.nomPro" readonly>
+        </div>
+        <div class="col-md-6">
+          <label for="cantidad" class="form-label">cantidad</label>
+          <input type="number" class="form-control" id="cantidad" name="cantidad"
+          [(ngModel)]="nuevaSolicitud.cantidad">
+        </div>
+        <div class="col-md-6">
+            <label for="nomProvee" class="form-label">Proveedor</label>
+            <input type="text" class="form-control" id="nomProvee" name="nomProvee"
+            [(ngModel)]="producto.objProveedor.nomProvee" readonly>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Correo</label>
+            <input type="text" class="form-control" id="email" name="email"
+            [(ngModel)]="producto.objProveedor.email" readonly>
+          </div>
+          <div class="col-md-6">
+            <label for="fecha" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="fecha" name="fecha"
+            [(ngModel)]="nuevaSolicitud.fecha">
+          </div>
+          <div class="col-md-6">
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <input type="text" class="form-control" id="descripcion" name="descripcion"
+            [(ngModel)]="nuevaSolicitud.descripcion">
+          </div>
+       
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+    </div>

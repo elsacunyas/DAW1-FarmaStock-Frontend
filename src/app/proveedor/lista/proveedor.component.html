@@ -1,0 +1,69 @@
+
+<h1>Proveedores</h1>
+
+<p>
+  
+    <button (click)='irRegistrarProveedor()'>crear nuevo</button>
+</p>
+
+<br />
+<div>
+    <input type="text" [(ngModel)]="name"/>
+    <button (click)="buscarProveedor(name)">Buscar</button>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> 
+                ID
+            </th>
+            <th>
+                RUC
+            </th>
+            <th>
+                Proveedor
+            </th>
+            <th>
+                Correo
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let proveedor of proveedores">
+            <td>
+                {{proveedor.id}}
+            </td>
+            <td>
+                {{proveedor.ruc}}
+            </td>
+            <td>
+                {{proveedor.nomProvee}}
+            </td>
+            <td>
+                {{proveedor.email}}
+            </td>
+            <td>
+                {{proveedor.telefono}}
+            </td>
+            <td>
+                {{proveedor.direccion}}
+            </td>
+            <td>
+                <button (click)="irEditarProveedor(proveedor.id)" type="submit" class="btn btn-success">Edit</button>
+                <button type="submit" class="btn btn-warning">Details</button>
+                 <button (click)="eliminar(proveedor.id)" type="submit" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
