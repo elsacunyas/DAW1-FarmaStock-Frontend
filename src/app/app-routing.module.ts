@@ -6,6 +6,8 @@ import { RegisterComponent } from './register/register.component';
 import { ProveedorComponent } from './proveedor/lista/proveedor.component';
 import { CrearComponent } from './proveedor/crear/crear.component';
 import { SolicitudCrearComponent } from './solicitud/crear/crear.component';
+import { ProveedorDetalleComponent } from './proveedor/detalle/detalle.component';
+import { SolicitudListaComponent } from './solicitud/lista/lista.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:'proveedor/crear',component:CrearComponent},
   {path:'editar/:id',component:CrearComponent},
   {path:'solicitud/crear',component:SolicitudCrearComponent},
+  {path:'solicitud/lista',component:SolicitudListaComponent},
+  {path:'proveedor/detalle/:id',component:ProveedorDetalleComponent},
 ];
 
 @NgModule({

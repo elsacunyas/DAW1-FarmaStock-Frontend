@@ -8,35 +8,27 @@
     background-color: #fff; /* Fondo blanco */
   }
   
-  /* Estilos adicionales para mejorar el diseño */
+  /* Estilos para campos de entrada */
   .form-control {
     border-radius: 0.25rem; /* Bordes redondeados en campos de entrada */
+    background-color: #f8f9fa; /* Fondo gris claro para campos readonly */
+    cursor: not-allowed; /* Indicar que el campo es readonly */
   }
   
+  /* Estilos para etiquetas */
   .form-label {
     font-weight: 600; /* Peso de fuente para etiquetas */
   }
   
-  /* Estilo para el botón de búsqueda */
-  .btn-outline-primary {
-    border-color: #007bff;
-    color: #007bff;
+  /* Estilo para el botón de volver */
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
   }
   
-  .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Estilo para el botón de registro */
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
   }
   
   /* Estilo para el contenedor del título */
@@ -45,6 +37,11 @@
   }
   
   /* Espaciado entre los elementos del formulario */
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  /* Margen inferior para el contenedor */
   .mb-4 {
     margin-bottom: 1.5rem;
   }

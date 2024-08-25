@@ -19,6 +19,8 @@ import { RegisterComponent } from './register/register.component';
 import { CrearComponent } from './proveedor/crear/crear.component';
 import { ProveedorComponent } from './proveedor/lista/proveedor.component';
 import { SolicitudCrearComponent } from './solicitud/crear/crear.component';
+import { ProveedorDetalleComponent } from './proveedor/detalle/detalle.component';
+import { SolicitudListaComponent } from './solicitud/lista/lista.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { SolicitudCrearComponent } from './solicitud/crear/crear.component';
     CrearComponent,
     ProveedorComponent,
     SolicitudCrearComponent,
+    ProveedorDetalleComponent,
+    SolicitudListaComponent,
   ],
   imports: [
     BrowserModule,

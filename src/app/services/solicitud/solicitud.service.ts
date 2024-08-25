@@ -15,4 +15,8 @@ export class SolicitudService {
     return this.http.post<any>(this.baseUrl,solicitud);
  
   }
+
+  public listar(): Observable<Solicitud[]>{
+    return this.http.get<Solicitud[]>(this.baseUrl);
+  }
 }

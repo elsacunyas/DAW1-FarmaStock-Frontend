@@ -42,5 +42,10 @@ listar(){
       this.listar();
   });
 }
+  irDetalle(id: number){
+    this.router.navigate(['proveedor/detalle',id])
+  }
 
+ 
 }
+
