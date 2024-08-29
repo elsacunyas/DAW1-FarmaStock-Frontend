@@ -24,7 +24,7 @@ export class ProveedorService {
     return  this.http.get<Proveedor>(this.baseUrl + `/${id}`);
   }
   public buscar(name: String): Observable<Proveedor[]>{
-    return  this.http.get<Proveedor[]>(this.baseUrl + `/buscar?name=${name}`);
+    return  this.http.get<Proveedor[]>(this.baseUrl + `?name=${name}`);
   }
   public eliminar(id: number):Observable<any>{
     return this.http.delete(this.baseUrl + `/${id}`);

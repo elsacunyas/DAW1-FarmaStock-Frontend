@@ -33,9 +33,14 @@
           <td>
             <button (click)="irEditarProveedor(proveedor.id)" class="btn btn-success btn-sm me-2">Editar</button>
             <button type="button" class="btn btn-warning btn-sm me-2"(click)="irDetalle(proveedor.id)" >Detalles</button>
-            <button (click)="eliminar(proveedor.id)" class="btn btn-danger btn-sm">Eliminar</button>
+            <!-- <button (click)="eliminar(proveedor.id)" class="btn btn-danger btn-sm">Eliminar</button> -->
           </td>
         </tr>
       </tbody>
     </table>
+    <div class="button-container">
+      <button type="button" class="btn btn-danger" (click)="irInicio()">Inicio</button>
+    </div>
   </div>
+
+

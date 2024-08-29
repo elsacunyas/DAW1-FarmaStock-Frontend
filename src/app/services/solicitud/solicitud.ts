@@ -1,3 +1,6 @@
+import { Producto } from "../proveedor/producto";
+
+
 export interface Solicitud{
 
      id: number;
@@ -7,5 +10,6 @@ export interface Solicitud{
 	 correo: String
 	 fecha: Date;
 	 descripcion: String;
+	 objProducto?: Producto;
 	
 }

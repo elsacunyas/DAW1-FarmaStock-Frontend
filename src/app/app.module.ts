@@ -21,6 +21,7 @@ import { ProveedorComponent } from './proveedor/lista/proveedor.component';
 import { SolicitudCrearComponent } from './solicitud/crear/crear.component';
 import { ProveedorDetalleComponent } from './proveedor/detalle/detalle.component';
 import { SolicitudListaComponent } from './solicitud/lista/lista.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SolicitudListaComponent } from './solicitud/lista/lista.component';
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:JwtInterceptorService,multi:true},

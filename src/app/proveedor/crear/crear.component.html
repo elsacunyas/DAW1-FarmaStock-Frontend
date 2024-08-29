@@ -5,10 +5,10 @@
   
   <div class="form-wrapper">
     <form class="row g-3" (ngSubmit)="registrarProveedor()">
-      <div class="col-md-6">
-        <label for="id" class="form-label">ID</label>
+      <!--<div class="col-md-6">
+       <label for="id" class="form-label">ID</label>
         <input type="number" class="form-control" id="id" name="id" [(ngModel)]="nuevoProveedor.id" required>
-      </div>
+      </div>-->
       
       <div class="col-md-6">
         <label for="ruc" class="form-label">RUC</label>
@@ -39,5 +39,21 @@
         <button type="submit" class="btn btn-primary">Registrar Proveedor</button>
       </div>
     </form>
+    <div class="col-12 text-center mt-4">
+      <button href="#" class="btn btn-secondary" (click)="irAlistado()" >Volver</button>
+    </div>
   </div>
 </div>
+
+<ng-template #successModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Éxito</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    Registro exitoso.
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Close click')">Cerrar</button>
+  </div>
+</ng-template>

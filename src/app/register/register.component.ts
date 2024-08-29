@@ -27,4 +27,7 @@ export class RegisterComponent {
       }
     })
   }
+  irAlistado(){
+    this.enrutador.navigate(['proveedor/lista'])
+  }
 }

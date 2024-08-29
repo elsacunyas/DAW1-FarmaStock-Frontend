@@ -46,6 +46,9 @@ listar(){
     this.router.navigate(['proveedor/detalle',id])
   }
 
+  irInicio(){
+    this.router.navigate(['inicio'])
+  }
  
 }
 

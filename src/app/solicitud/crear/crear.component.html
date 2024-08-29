@@ -13,10 +13,10 @@
       </div>
   
       <form class="row g-3" (ngSubmit)="registrarSolicitud()">
-        <div class="col-md-6">
+        <!--<div class="col-md-6">
           <label for="id" class="form-label">ID</label>
           <input type="number" class="form-control" id="id" name="id" [(ngModel)]="nuevaSolicitud.id" required>
-        </div>
+        </div>-->
   
         <div class="col-md-6">
           <label for="nomPro" class="form-label">Producto</label>
@@ -54,3 +54,16 @@
       </form>
     </div>
   </div>
+
+  <ng-template #successModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Éxito</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      Registro exitoso.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Close click')">Cerrar</button>
+    </div>
+  </ng-template>

@@ -51,3 +51,12 @@
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
   }
+  .button-container {
+    text-align:end; 
+    margin-top: 20px; 
+}
+
+
+.button-container .btn {
+    margin-top: 10px; 
+}

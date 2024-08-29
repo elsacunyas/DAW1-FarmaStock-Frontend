@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Producto } from 'src/app/services/proveedor/producto';
 import { ProductoService } from 'src/app/services/proveedor/producto.service';
 import { Solicitud } from 'src/app/services/solicitud/solicitud';
 import { SolicitudService } from 'src/app/services/solicitud/solicitud.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-crear',
@@ -11,6 +12,7 @@ import { SolicitudService } from 'src/app/services/solicitud/solicitud.service';
   styleUrls: ['./crear.component.css']
 })
 export class SolicitudCrearComponent {
+  @ViewChild('successModal') successModal!: TemplateRef<any>; 
   producto: Producto ={
     id: 0,
     nomPro: "",
@@ -34,15 +36,17 @@ export class SolicitudCrearComponent {
 	 descripcion: '',
   }
   constructor(private solicitudService: SolicitudService,private productoService: ProductoService,
-    private router: Router
+    private router: Router,private modalService: NgbModal
   ){}
 
   registrarSolicitud(){
     this.nuevaSolicitud.idPro = this.producto.id
     this.nuevaSolicitud.idProveedor = this.producto.objProveedor.id
+    this.nuevaSolicitud.correo = this.producto.objProveedor.email
     this.solicitudService.registrar(this.nuevaSolicitud).
     subscribe(Response =>{
       console.log('Solicitud Registrado',Response);
+      this.showSuccessDialog();
       this.nuevaSolicitud ={
         id: 0,
         idPro: 0,
@@ -79,6 +83,10 @@ export class SolicitudCrearComponent {
     this.productoService.buscarProducto(name).subscribe(data =>{
       this.producto = data[0];
     });
+  }
+
+  showSuccessDialog(){
+    this.modalService.open(this.successModal);
   }
 
 }

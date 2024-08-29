@@ -24,5 +24,12 @@ export class SolicitudListaComponent {
     });
   }
 
+  irRegistroSolicitud(){
+    this.router.navigate(['solicitud/crear']);
+  }
+  
+  irInicio(){
+    this.router.navigate(['inicio'])
+  }
 
 }
